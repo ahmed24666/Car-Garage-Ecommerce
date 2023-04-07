@@ -1,0 +1,71 @@
+.Section1 {
+    .button{
+        font-size: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.4);
+        width: fit-content;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        color: white;
+        @media (max-width:767px) {
+            font-size: 17px;
+        }
+        &::before{
+            content: '';
+            width: 5%;
+            height: 100%;
+            background-color: var(--mcolor);
+            left: 0;
+            z-index: -1;
+            position: absolute;
+            transition: 0.5s;
+        }
+        &:hover .icon{
+            transform: rotate(90deg);
+        }
+        &:hover::before{
+            width: 100%;
+        }
+    }
+  h1 {
+    font-size: 90px;
+    letter-spacing: -5px;
+    font-weight: 600;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #333;
+    color: transparent;
+    width: fit-content;
+    cursor: pointer;
+    line-height: 100px;
+    &:hover{
+        color: white;
+        -webkit-text-stroke-width: 0px;
+        box-shadow: #333;
+    }
+    @media (max-width:767px) {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    @media (max-width:400px) {
+        font-size: 55px;
+        line-height: 70px;
+    }
+  }
+  h1.active{
+    color: white;
+    -webkit-text-stroke-width: 0px;
+    box-shadow: #333;
+  }
+  h3{
+      color: white;
+  }
+  p{
+    font-size: 17px;
+      color: #9A9A9A;
+  }
+  h6{
+      color: #9A9A9A;
+  }
+}

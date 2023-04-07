@@ -1,0 +1,47 @@
+.Cart {
+  .image {
+    height: 70vh;
+    @media (max-width: 992px) {
+      height: 50vh;
+    }
+  }
+  .img{
+      width: 80px;
+  }
+  .icon{
+    color: var(--mcolor);
+    cursor: pointer;
+  }
+  .button{
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    @media (max-width:767px) {
+        font-size: 17px;
+    }
+    &::before{
+        content: '';
+        width: 5%;
+        height: 100%;
+        background-color: var(--mcolor);
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        transition: 0.5s;
+    }
+    &:hover{
+      color: white;
+    }
+    &:hover .i{
+        transform: rotate(180deg);
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+}

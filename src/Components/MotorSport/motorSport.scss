@@ -1,0 +1,28 @@
+.MotorSport{
+    background-color: black;
+    h1{
+        color: white;
+        font-weight: 600;
+        font-size: 40px;
+    }
+    .textHead{
+        display: flex;
+        align-items: baseline;
+        gap: 15px;
+
+        .dot{
+            width: 3px;
+            height: 20px;
+            background-color: var(--mcolor);
+        }
+        h2{
+color: white;
+font-size: 25px;
+        }
+    }
+    p{
+        font-size: 17px;
+        font-weight: 500;
+        color: #9A9A9A;
+    }
+}

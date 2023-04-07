@@ -1,0 +1,35 @@
+.Footer{
+    border-top: 3px solid #333;
+    svg{
+        filter: invert(1);
+    }
+    p{
+        color: #9a9a9a;
+        font-size: 18px;
+    }
+    h1{
+        color: white;
+        font-size: 25px;
+    }
+    span{
+        color: white;
+    }
+    .first{
+        @media (max-width:990px) {
+            text-align: center;
+        }
+    }
+    h3{
+        color: white;
+        font-size: 20px;
+    }
+    h4{
+        color: #9a9a9a;
+        font-size: 17px;
+        padding: 10px 0;
+        cursor: pointer;
+        &:hover{
+            color:white;
+        }
+    }
+}

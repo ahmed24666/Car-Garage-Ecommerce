@@ -1,0 +1,51 @@
+.Navbar{
+    background-color: transparent;
+    position: fixed;
+    z-index: 900;
+    color: white;
+    
+    a.active{
+        color: var(--mcolor) !important;
+    }
+    svg{
+        filter: invert(1);
+    }
+    @media (max-width:992px) {
+        position: static !important;
+        color: black;
+        svg{
+            filter: invert(0) !important;
+        }
+    }
+    h4{
+        cursor: pointer;
+    }
+    .icon{
+        cursor: pointer;
+        font-size: 30px;
+    }
+    .left{
+        height: fit-content;
+    }
+    .num{
+        width: 20px;
+        height: 20px;
+        background-color: var(--mcolor);
+        color: white;
+    }
+}
+.side{
+    height: calc(100vh - 94px);
+    overflow: hidden;
+    h2{
+        cursor: pointer;
+        font-size: 30px;
+        color:var(--mcolor);
+    }
+    .num{
+        width: 20px;
+        height: 20px;
+        background-color: var(--mcolor);
+        color: white;
+    }
+}

@@ -1,0 +1,82 @@
+.Single {
+  .image {
+    height: 70vh;
+    @media (max-width: 992px) {
+      height: 50vh;
+    }
+  }
+  .dot {
+    width: 3px;
+    height: 15px;
+    background-color: var(--mcolor);
+  }
+  h6 {
+    cursor: pointer;
+  }
+  .img{
+      height: 400px;
+  }
+  h1{
+      font-size: 50px;
+      font-weight: 600;
+      letter-spacing: 2px;
+  }
+  h2{
+      font-size: 25px;
+      letter-spacing: 2px;
+      font-weight: 400;
+  }
+  p{
+      font-size: 17px;
+      letter-spacing: 1px;
+  }
+  .stars{
+      color: var(--mcolor);
+      font-size: 25px;
+  }
+  .isStock{
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .button{
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.4);
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+    @media (max-width:767px) {
+        font-size: 17px;
+    }
+    &::before{
+        content: '';
+        width: 5%;
+        height: 100%;
+        background-color: var(--mcolor);
+        left: 0;
+        z-index: -1;
+        position: absolute;
+        transition: 0.5s;
+    }
+    &:hover{
+      color: white;
+    }
+    &:hover .icon{
+        transform: rotate(90deg);
+    }
+    &:hover::before{
+        width: 100%;
+    }
+}
+input{
+  outline: none;
+  border: 1px solid var(--mcolor);
+  border-radius: 10px;
+  padding: 10px;
+  caret-color: var(--mcolor);
+}
+}

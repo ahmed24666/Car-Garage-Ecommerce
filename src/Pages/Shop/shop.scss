@@ -1,0 +1,80 @@
+.Shop {
+  // #########3####33#
+  
+  .image {
+    height: 70vh;
+    @media (max-width: 992px) {
+      height: 50vh;
+    }
+  }
+  .dot {
+    width: 3px;
+    height: 15px;
+    background-color: var(--mcolor);
+  }
+  h6 {
+    cursor: pointer;
+  }
+  .ShopContainer {
+    flex: 3;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+    .oneCard {
+      cursor: pointer;
+      .img {
+        position: relative;
+        height: 350px;
+        h6 {
+          position: absolute;
+          top: 20px;
+          left: 30px;
+          color: #9a9a9a;
+          display: flex;
+          gap: 10px;
+        }
+        h4 {
+          font-size: 20px;
+          position: absolute;
+          bottom: 40px;
+          left: 30px;
+        }
+        
+        .price {
+          position: absolute;
+          display: inline;
+          bottom: 15px;
+          font-size: 16px;
+          letter-spacing: 2px;
+          left: 30px;
+        }
+      }
+    }
+  }
+  .filter {
+    flex: 1;
+  }
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    button {
+      border: none;
+      border-right: 1px solid var(--mcolor);
+      padding: 10px 20px;
+    }
+    .curr {
+      background-color: var(--mcolor);
+      color: white;
+    }
+  }
+}

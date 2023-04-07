@@ -1,0 +1,71 @@
+.Progress {
+  background-color: #161616;
+
+  .image{
+      height: 400px;
+      @media (max-width: 990px) {
+        height: 300px;
+      }
+      @media (max-width: 400px) {
+        height: 250px;
+      }
+  }
+  h2 {
+    width: 80%;
+    font-size: 40px;
+    color: white;
+    @media (max-width: 990px) {
+      font-size: 30px;
+    }
+  }
+  h1 {
+    font-size: 110px;
+    letter-spacing: -5px;
+    font-weight: 600;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #333;
+    color: transparent;
+    width: fit-content;
+    cursor: pointer;
+    line-height: 100px;
+    width: 80%;
+    @media (max-width: 990px) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+    @media (max-width: 400px) {
+      font-size: 55px;
+      line-height: 70px;
+    }
+  }
+  p{
+      font-size: 18px;
+      width: 80%;
+      color: rgb(145, 145, 145);
+  }
+  .item{
+    width: 80%;
+    .text{
+      span{
+        color: white;
+        text-transform: uppercase;
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+    }
+    .prog{
+      position: relative;
+      width: 100%;
+      height: 4px;
+      background-color: #505050;
+      span{
+        position: absolute;
+        height: 100%;
+        left: 0;
+        background-color: var(--mcolor);
+        transition: 1.5s !important;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './app.scss'
 // pages
 import Cart from './Pages/Cart/Cart'
@@ -19,14 +19,16 @@ import ScrollToTop from "./Components/ScrollToTop";
 function App() {
 
   const Layout = () => {
-    const [load, setLoad] = useState(true)
-    const loading = () => {
-      setLoad(false)
-    }
-    window.addEventListener('load', loading)
+    const [isLoader, setIsLoader] = useState(false)
+    useEffect(() => {
+      setIsLoader(true)
+      setTimeout(() => {
+        setIsLoader(false)
+      }, 2000);
+    }, [])
     return (
       <div className="app">
-        {load ? (<Loader />) : (
+        {isLoader ? (<Loader />) : (
           <>
             <ScrollToTop />
             <Navbar />

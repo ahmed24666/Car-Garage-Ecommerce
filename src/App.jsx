@@ -13,6 +13,8 @@ import Footer from "./Components/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Loader from "./Components/Loader/Loader";
 import ScrollToTop from "./Components/ScrollToTop";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 
 
@@ -28,14 +30,16 @@ function App() {
     }, [])
     return (
       <div className="app">
-        {isLoader ? (<Loader />) : (
-          <>
-            <ScrollToTop />
-            <Navbar />
-            <Outlet />
-            <Footer />
-          </>
-        )}
+        <Provider store={store}>
+          {isLoader ? (<Loader />) : (
+            <>
+              <ScrollToTop />
+              <Navbar />
+              <Outlet />
+              <Footer />
+            </>
+          )}
+        </Provider>
       </div>
     )
   }
